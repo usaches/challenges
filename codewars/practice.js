@@ -71,3 +71,10 @@ var capitals = function (word) {
     }
     return arr;
 };
+
+function minMax(arr){
+    var arr1=arr.toString();
+    var arr2 = arr1.split(",");
+    var str = arr2;
+    return [parseFloat(Math.min(...str)), parseFloat(Math.max(...str))]; // fix me!
+}
