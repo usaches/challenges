@@ -20,6 +20,20 @@ function findUniq(word) {
         }
     }
 }
+function findUniq(arr) {
+    // do magic
+    var init;
+    var found;
+    for (var i=0; i<arr.length; i++){
+        if(arr[0] !== arr[i]){
+            var init = arr[i];
+            if (init == arr[2]&&init==arr[1]){
+                found = arr[0];
+                return found;}
+            else { return init;}
+        }
+    }
+}
 
 
 function isDivisible(n, x, y) {
@@ -72,6 +86,25 @@ var capitals = function (word) {
     return arr;
 };
 
+function multiply(a, b){
+    return a * b;
+
+}
+
+var isSquare = function(n){
+    var r=Math.sqrt(n);
+    if(Number.isInteger(r)){
+        return(true);}
+    else{return(false);}
+
+
+}
+function noSpace(x){
+    return x.split(' ').join('');
+}
+
+
+
 function minMax(arr){
     var arr1=arr.toString();
     var arr2 = arr1.split(",");
@@ -95,3 +128,22 @@ class SequenceSum {
 
 // Function Export
 module.exports = SequenceSum;
+
+function isIsogram(str){
+    var i, j;
+    str = str.toLowerCase();
+    for(i = 0; i < str.length; ++i) {
+        for(j = i + 1; j < str.length; ++j) {
+            if(str[i] === str[j]) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+class SmallestIntegerFinder {
+    findSmallestInt(args) {
+        var small = Math.min(...args)
+        return small;
+    }
+}
