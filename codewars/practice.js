@@ -176,3 +176,53 @@ const nbYear = (p0, percent, aug, p) => {
   return y
 }
 */
+function isTriangle(a,b,c)
+{if((a+b)<=c ||(a+c)<=b || (c+b)<=a){
+    return false;
+}
+else return true
+}
+
+function getDivisorsCnt(n){
+    for(var i=0, j=0; i<=n; i++){
+        if(n % i ==0){
+            j++;
+        }
+    }return j;
+
+}
+
+function descendingOrder(n){
+    return +(n+'').split('').sort().reverse().join('')
+
+
+}
+
+function minValue(values){
+    return +(Array.from(new Set(values))).sort((a,b)=>a-b).join('');
+}
+
+function sumTwoSmallestNumbers(numbers) {
+    function sortNumber(a,b) {
+        return a - b;
+    }
+
+    var numArray = numbers;
+    numArray.sort(sortNumber);
+    numArray.join(",");
+
+    return numArray[0] + numArray[1]
+};
+
+function persistence(num) {
+    var times = 0;
+
+    num = num.toString();
+
+    while (num.length > 1) {
+        times++;
+        num = num.split('').map(Number).reduce((a, b) => a * b).toString();
+    }
+
+    return times;
+}
