@@ -226,3 +226,20 @@ function persistence(num) {
 
     return times;
 }
+var number = function(busStops){
+    var on =0;
+    var off = 0;
+    for (var i =0; i<busStops.length; i++){
+        on = on + busStops[i][0]
+        off = off - busStops[i][1]
+    }
+    return on + off;
+}
+
+function sortNumber(a,b) {
+    return a-b;
+}
+var numArray = [140, 1400, 14000, 90];
+
+numArray.sort(sortNumber);
+numArray.join(",");
