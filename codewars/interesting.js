@@ -8,6 +8,7 @@ function diamond(n) {
 
            arr.push('*');
         }
+
         arr.push('<br />');
     }
     console.log(arr.join(''));
@@ -30,3 +31,16 @@ function FizzBuzz() {
     }
 }
 FizzBuzz();
+
+
+function evaporator(content, evap_per_day, threshold){
+    var perc = (100-evap_per_day)/100;
+    var left = 100;
+    for(var i =0, j=1; i<1000; i++){
+        if(perc*left < threshold){return j}
+        else{
+            left = perc*left;
+            j++}
+
+    }
+}
