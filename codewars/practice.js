@@ -263,3 +263,21 @@ function gcd_two_numbers(x, y) {
 }
 console.log(lcm_two_numbers(3,15));
 console.log(lcm_two_numbers(10,15));
+
+
+function ret(num) {
+  
+   if (typeof num !== 'number')
+       return false; 
+  
+  return !isNaN(num) && 
+         parseInt(Number(num)) == num && 
+         !isNaN(parseInt(num, 10));
+}
+console.log(ret(23));
+function st(num)
+{
+return parseInt(Math.sqrt(num)+"");
+}
+
+console.log(st(17));
